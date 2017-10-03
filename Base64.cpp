@@ -10,7 +10,7 @@ inline void a3_to_a4(unsigned char* a4, const unsigned char * a3);
 inline void a4_to_a3(unsigned char* a3, const unsigned char * a4);
 inline unsigned char b64_lookup(const char c);
 
-int base64_encode(char *output, const char *input, const int inputLen, int pad) {
+int base64_encode(char *output, char *input, int inputLen, int pad) {
 	int i = 0, j = 0;
 	int encLen = 0;
 	//unsigned char a3[3];
@@ -52,7 +52,7 @@ int base64_encode(char *output, const char *input, const int inputLen, int pad) 
 	return encLen;
 }
 
-int base64_decode(char * output, const char * input, const int inputLen) {
+int base64_decode(char * output, char * input, int inputLen) {
 	int i = 0, j = 0;
 	int decLen = 0;
 	//unsigned char a3[3];
